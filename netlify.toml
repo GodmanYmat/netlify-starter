@@ -4,3 +4,6 @@
 [functions]
   directory = "netlify/functions/"
   node_bundler = "esbuild"
+  # Waline/ThinkJS loads controllers and middleware from disk at runtime.
+  external_node_modules = ["@waline/vercel", "serverless-http"]
+  included_files = ["node_modules/@waline/vercel/**", "!node_modules/**/*.map"]
