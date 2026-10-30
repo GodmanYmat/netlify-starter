@@ -10,11 +10,11 @@ scope, then redeploy:
 - `NODE_OPTIONS=--experimental-require-module`: AWS Lambda disables this Node
   feature by default; Waline 1.43.4 requires it for its ESM dependencies.
 - `PG_HOST`: Neon connection hostname (the pooled endpoint is supported).
-- `PG_PORT=5432`
+- `PG_PORT`: the port from the Neon connection settings.
 - `PG_DB`: database name.
 - `PG_USER`: database role.
 - `PG_PASSWORD`: database password; store as a secret, never in Git.
-- `PG_SSL=true`
+- `PG_SSL`: enable SSL for the Neon connection.
 
 Initialize an empty database using the official
 [Waline PostgreSQL schema](https://github.com/walinejs/waline/blob/main/assets/waline.pgsql).
